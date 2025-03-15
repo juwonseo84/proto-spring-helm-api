@@ -1,0 +1,19 @@
+replicaCount: 1
+
+image:
+  repository: seojuwon/proto-spring-helm-api
+  tag: 0.0.7
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8092
+
+serviceAccount:
+  create: true
+  name: helm-runner-sa
+
+rbac:
+  create: true
+
+resources: {}
