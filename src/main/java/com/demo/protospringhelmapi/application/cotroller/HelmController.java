@@ -12,7 +12,7 @@ public class HelmController {
     @Autowired
     private HelmService helmService;
 
-    @PostMapping("/install")
+    @PostMapping("/installs")
     public String install(@RequestBody HelmRequest req) throws Exception {
         return helmService.installFromGit(
                 req.getReleaseName(), req.getGitUrl(), req.getBranch(), req.getToken(), req.getNamespace(), req.getChartPath()
