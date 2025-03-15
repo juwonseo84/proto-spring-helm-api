@@ -1,0 +1,10 @@
+server:
+  port: 8092
+spring:
+  application:
+    name: proto-spring-helm-api
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
